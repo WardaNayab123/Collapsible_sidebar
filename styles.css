@@ -1,0 +1,98 @@
+.body{
+    margin:0;
+    font-family:Arial,sans-sarif;
+}
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width: 250px;
+    height:100%;
+    background-color: black;
+    color:white;
+    padding:20x;
+    transform:translateX(0);
+    transition:transform 0.3s ease;
+}
+.sidebar .logo{
+font-size:20px;
+margin-bottom:30px;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration:none;
+    padding: 12px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-size: medium;
+}
+
+.nav-item:hover {
+    background-color:blue;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar {
+    width: 200px;
+    transition: width 0.3s;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    padding: 10px 0;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.nav-item span {
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .nav-item span {
+    opacity: 0;
+    pointer-events: none;
+}
+.toggle-btn img{
+width:25px;
+height:25px;
+
+}
+.toggle-btn {
+    position:fixed;
+    top: 10px;
+    left: 165px;
+   
+    padding:6px;
+    background:none;
+    border: none;
+    cursor:pointer;
+    z-index: 1000;
+}
+
+.sidebar.collapsed + .toggle-btn {
+    left: 70px;
+}
